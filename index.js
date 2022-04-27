@@ -111,6 +111,9 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
+  res.send("You are Increasable");
+});
+app.get("/genius", (req, res) => {
   res.send("You are Genius");
 });
 
