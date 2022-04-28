@@ -43,7 +43,7 @@ async function run() {
     const serviceCollection = client.db("geniusCar").collection("service");
     const orderCollection = client.db("geniusCar").collection("order");
 
-    // AUTH
+    // AUTH (GETTING TOKEN FOR USER)
     app.post("/login", (req, res) => {
       const user = req.body;
       const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN, {
